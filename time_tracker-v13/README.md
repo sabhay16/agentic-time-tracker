@@ -65,17 +65,7 @@ npm run dev
 
 ## ☁️ Deployment on Render
 
-### 1. Push to GitHub
-
-```bash
-git init
-git remote add origin https://github.com/youruser/agentic-time-tracker.git
-git add .
-git commit -m "Initial commit"
-git push -u origin main
-```
-
-### 2. Backend Service (FastAPI)
+### 1. Backend Service (FastAPI)
 
 - New Web Service → Connect GitHub
 - Build Command: `pip install -r requirements.txt`
@@ -84,12 +74,12 @@ git push -u origin main
   - `DATABASE_URL` (from Render PostgreSQL)
   - `OPENAI_API_KEY`
 
-### 3. PostgreSQL
+### 2. PostgreSQL
 
 - Create a new PostgreSQL service on Render
 - Set `DATABASE_URL` in backend env
 
-### 4. Frontend (Static Site)
+### 3. Frontend (Static Site)
 
 - New Static Site → `frontend/` directory
 - Build Command: `npm install && npm run build`
