@@ -105,9 +105,3 @@ git push -u origin main
 | `DATABASE_URL`   | PostgreSQL DB connection |
 
 ---
-
-## 📎 License
-
-MIT License – free to use, modify, and distribute.
-
----
