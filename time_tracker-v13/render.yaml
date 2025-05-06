@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: agentic-time-tracker
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bash start.sh"
+    envVars:
+      - key: DB_URL
+        value: postgresql://user:password@hostname:5432/timetracker
+
+  - type: static
+    name: agentic-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: frontend/dist
+    buildFilter:
+      paths:
+        - frontend/**
